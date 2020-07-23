@@ -1,0 +1,43 @@
+<div class="cardWrapper">
+  <div>
+    <input
+      #myInput
+      type="text"
+      class="input"
+      [(ngModel)]="inputValue"
+      (input)="filterItem(myInput.value)"
+      placeholder="Search by Name"
+    />
+  </div>
+  <div class="card" *ngFor="let place of places; let i = index">
+    <div class="innerWrapper">
+      <div class="inner-card">
+        <div class="cardImg" (click)="clickPlace(place, i)">
+          <img [src]="place.mainPhotoUrl" alt="" />
+          <span class="from">From : ${{ place.ratePerHour }}</span>
+          <span class="participant"
+            >Participants : {{ place.maxParticipants }}</span
+          >
+        </div>
+        <div class="title">
+          <h3>{{ place.name }}</h3>
+        </div>
+        <div class="address">
+          <p>{{ place.city }} {{ place.countryFullName }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mapWrapper">
+  <agm-map [latitude]="latitude" [zoom]="13" [longitude]="longitude">
+    <agm-marker
+      *ngFor="let m of placesBak; let i = index"
+      (markerClick)="clickedMarker(m, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lon"
+      [iconUrl]="m.marker"
+    >
+    </agm-marker>
+  </agm-map>
+</div>

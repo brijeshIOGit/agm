@@ -1,0 +1,78 @@
+.card {
+  width: 50%;
+
+  margin-right: -4px;
+  display: inline-block;
+}
+.innerWrapper {
+  padding: 0 30px;
+}
+.inner-card {
+  margin-bottom: 30px;
+  background: #fff;
+  box-shadow: 0 0 10px rgb(114, 112, 112);
+}
+.inner-card .title,
+.inner-card .address {
+  padding: 10px 15px;
+}
+.card img {
+  width: 100%;
+}
+.cardImg {
+  position: relative;
+}
+.cardImg .participant {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 8px;
+}
+.cardImg .from {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 8px;
+}
+h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+p {
+  margin-bottom: 5px;
+}
+.cardWrapper {
+  width: 70%;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+}
+
+.mapWrapper {
+  width: 30%;
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  position: fixed;
+  float: right;
+}
+agm-map {
+  height: 100vh;
+  width: 400px;
+}
+
+.input {
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
